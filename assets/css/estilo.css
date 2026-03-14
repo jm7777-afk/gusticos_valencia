@@ -1,0 +1,867 @@
+/* ============================================
+   ESTILOS GUSTICO'S - DISEÑO ORIGINAL
+   Basado en la imagen proporcionada
+   Colores: Morado (#6A0DAD) y Verde (#4CAF50)
+============================================ */
+
+:root {
+    --morado: #6A0DAD;
+    --morado-claro: #9B4DFF;
+    --morado-oscuro: #4A0D7A;
+    --verde: #4CAF50;
+    --verde-claro: #80E27E;
+    --verde-oscuro: #2E7D32;
+    --blanco: #FFFFFF;
+    --gris-claro: #F5F5F5;
+    --gris-medio: #E0E0E0;
+    --gris-oscuro: #333333;
+    --texto: #212121;
+    --texto-secundario: #757575;
+    --rojo: #D32F2F;
+    --rojo-claro: #FFCDD2;
+    --amarillo: #FFC107;
+    --sombra: 0 4px 12px rgba(0,0,0,0.1);
+    --sombra-fuerte: 0 8px 24px rgba(106,13,173,0.2);
+    --borde-redondo: 12px;
+    --borde-redondo-btn: 40px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--gris-claro);
+    color: var(--texto);
+    line-height: 1.5;
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ===== HEADER ===== */
+.header {
+    background: linear-gradient(135deg, var(--morado), var(--verde));
+    color: white;
+    padding: 20px 0;
+    box-shadow: var(--sombra);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: white;
+}
+
+.logo span {
+    color: #FFD700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* ===== BOTONES ===== */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border: none;
+    border-radius: var(--borde-redondo-btn);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.btn-morado {
+    background: var(--morado);
+    color: white;
+}
+
+.btn-morado:hover {
+    background: var(--morado-oscuro);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(106,13,173,0.4);
+}
+
+.btn-verde {
+    background: var(--verde);
+    color: white;
+}
+
+.btn-verde:hover {
+    background: var(--verde-oscuro);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(76,175,80,0.4);
+}
+
+.btn-rojo {
+    background: var(--rojo);
+    color: white;
+}
+
+.btn-rojo:hover {
+    background: #B71C1C;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--morado);
+    color: var(--morado);
+}
+
+.btn-outline:hover {
+    background: var(--morado);
+    color: white;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ===== TARJETAS ===== */
+.card {
+    background: white;
+    border-radius: var(--borde-redondo);
+    padding: 25px;
+    box-shadow: var(--sombra);
+    margin-bottom: 20px;
+    transition: all 0.3s;
+}
+
+.card:hover {
+    box-shadow: var(--sombra-fuerte);
+    transform: translateY(-5px);
+}
+
+/* ===== BADGES DE STOCK ===== */
+.badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 40px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-disponible {
+    background: var(--verde-claro);
+    color: var(--verde-oscuro);
+    border: 1px solid var(--verde);
+}
+
+.badge-pocas {
+    background: #FFF3E0;
+    color: #E65100;
+    border: 1px solid #FF9800;
+}
+
+.badge-agotado {
+    background: var(--rojo-claro);
+    color: var(--rojo);
+    border: 1px solid var(--rojo);
+}
+
+/* ===== FORMULARIOS ===== */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--texto);
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid var(--gris-medio);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--morado);
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(106,13,173,0.1);
+}
+
+/* ===== TABLAS ===== */
+.table-responsive {
+    overflow-x: auto;
+    margin: 20px 0;
+    border-radius: var(--borde-redondo);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: var(--borde-redondo);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+}
+
+th {
+    background: var(--morado);
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid var(--gris-medio);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background: #F9F9F9;
+}
+
+/* ===== PANTALLA 1: LOGIN ===== */
+.login-container {
+    max-width: 450px;
+    margin: 60px auto;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: var(--sombra-fuerte);
+    border-top: 5px solid var(--morado);
+}
+
+.login-container h1 {
+    text-align: center;
+    color: var(--morado);
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+}
+
+/* ===== PANTALLA 2: REGISTRO ===== */
+.registro-container {
+    max-width: 550px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: var(--sombra-fuerte);
+    border-top: 5px solid var(--verde);
+}
+
+.registro-container h1 {
+    text-align: center;
+    color: var(--verde);
+    margin-bottom: 30px;
+}
+
+/* ===== PANTALLA 3: PROMOCIONES ===== */
+.promos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.promo-card {
+    background: linear-gradient(135deg, var(--morado), var(--verde));
+    color: white;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--sombra-fuerte);
+    transition: all 0.3s;
+}
+
+.promo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(106,13,173,0.4);
+}
+
+.promo-card::after {
+    content: '🎁';
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+    font-size: 100px;
+    opacity: 0.15;
+    transform: rotate(15deg);
+}
+
+.promo-titulo {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.promo-subtitulo {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    opacity: 0.95;
+}
+
+.promo-descripcion {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.promo-boton {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 40px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 700;
+    border: 2px solid white;
+    transition: all 0.3s;
+    backdrop-filter: blur(5px);
+}
+
+.promo-boton:hover {
+    background: white;
+    color: var(--morado);
+    transform: scale(1.05);
+}
+
+/* ===== PANTALLA 4 Y 8: NUESTROS PRODUCTOS ===== */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.producto-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    transition: all 0.3s;
+    border: 1px solid rgba(106,13,173,0.1);
+}
+
+.producto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--sombra-fuerte);
+    border-color: var(--morado);
+}
+
+.producto-imagen {
+    height: 200px;
+    background: linear-gradient(135deg, var(--morado-claro), var(--verde-claro));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.producto-imagen i {
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+.producto-info {
+    padding: 20px;
+    position: relative;
+}
+
+.producto-nombre {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--morado);
+    margin-bottom: 8px;
+}
+
+.producto-medida {
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed var(--gris-medio);
+}
+
+.producto-precio {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--verde);
+    margin: 15px 0;
+}
+
+/* ===== PANTALLA 5: PAGO MÓVIL ===== */
+.pago-container {
+    max-width: 650px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: var(--sombra-fuerte);
+}
+
+.pago-titulo {
+    color: var(--morado);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.pago-info {
+    background: linear-gradient(135deg, var(--morado-claro), var(--verde-claro));
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 25px 0;
+    box-shadow: var(--sombra);
+}
+
+.pago-monto {
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+    margin: 20px 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* ===== PANTALLA 6: TOTAL A PAGAR ===== */
+.total-card {
+    background: linear-gradient(135deg, var(--morado), var(--verde));
+    color: white;
+    padding: 35px;
+    border-radius: 25px;
+    text-align: center;
+    margin: 30px 0;
+    box-shadow: var(--sombra-fuerte);
+}
+
+.total-titulo {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.total-cantidad {
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 15px 0;
+    line-height: 1.2;
+    text-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.total-bs {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    padding-top: 10px;
+    border-top: 2px dashed rgba(255,255,255,0.3);
+}
+
+/* ===== PANTALLA 7: MARTES15 (incluido en promos) ===== */
+
+/* ===== PANTALLA 9: MULTIPAGO ===== */
+.multipago-card {
+    background: linear-gradient(135deg, var(--morado), var(--verde));
+    color: white;
+    padding: 35px;
+    border-radius: 25px;
+    text-align: center;
+    margin: 25px 0;
+    box-shadow: var(--sombra-fuerte);
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 3px solid transparent;
+}
+
+.multipago-card:hover {
+    transform: translateY(-5px);
+    border-color: white;
+}
+
+.multipago-card h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.multipago-card p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.multipago-card .btn {
+    background: rgba(255,255,255,0.2);
+    border: 2px solid white;
+    margin-top: 15px;
+}
+
+/* ===== PANTALLA 10 Y 11: SALIR ===== */
+.salir-container {
+    text-align: center;
+    padding: 80px 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.salir-icono {
+    font-size: 6rem;
+    color: var(--morado);
+    margin-bottom: 25px;
+}
+
+.salir-titulo {
+    font-size: 2.5rem;
+    color: var(--morado);
+    margin-bottom: 20px;
+}
+
+.salir-botones {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* ===== CATEGORÍAS ===== */
+.categorias {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 15px 0;
+    margin: 20px 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--morado) var(--gris-medio);
+}
+
+.categorias::-webkit-scrollbar {
+    height: 6px;
+}
+
+.categorias::-webkit-scrollbar-track {
+    background: var(--gris-medio);
+    border-radius: 10px;
+}
+
+.categorias::-webkit-scrollbar-thumb {
+    background: var(--morado);
+    border-radius: 10px;
+}
+
+.categoria-item {
+    min-width: 120px;
+    text-align: center;
+    padding: 15px 10px;
+    background: white;
+    border-radius: 50px;
+    box-shadow: var(--sombra);
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.categoria-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--morado);
+    box-shadow: var(--sombra-fuerte);
+}
+
+.categoria-item.active {
+    background: var(--morado);
+    color: white;
+    border-color: var(--morado);
+}
+
+.categoria-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+/* ===== TASA BCV ===== */
+.tasa-info {
+    background: white;
+    border-radius: 50px;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    box-shadow: var(--sombra);
+    border-left: 5px solid var(--morado);
+}
+
+.tasa-valor {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--verde);
+    background: rgba(76,175,80,0.1);
+    padding: 8px 20px;
+    border-radius: 40px;
+}
+
+/* ===== MÉTODOS DE PAGO ===== */
+.metodo-pago {
+    cursor: pointer;
+    border: 2px solid var(--gris-medio);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: all 0.3s;
+    background: white;
+}
+
+.metodo-pago:hover {
+    border-color: var(--morado);
+    transform: translateX(10px);
+    box-shadow: var(--sombra);
+}
+
+.metodo-pago.seleccionado {
+    border-color: var(--morado);
+    background: rgba(106,13,173,0.05);
+    box-shadow: var(--sombra-fuerte);
+}
+
+/* ===== CARRITO FLOTANTE ===== */
+.fab {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--morado);
+    color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(106,13,173,0.5);
+    transition: all 0.3s;
+    z-index: 1000;
+    border: 3px solid white;
+    font-size: 1.5rem;
+}
+
+.fab:hover {
+    transform: scale(1.15);
+    background: var(--verde);
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--rojo);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    border: 2px solid white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #1a1a1a;
+    color: white;
+    padding: 50px 0;
+    margin-top: 60px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer h3 {
+    color: var(--verde);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--morado);
+    border-radius: 3px;
+}
+
+.footer p {
+    color: #AAA;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.footer i {
+    margin-right: 10px;
+    color: var(--verde);
+}
+
+/* ===== ANIMACIONES ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .promos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .logo h1 {
+        font-size: 1.8rem;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .promos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .categorias {
+        justify-content: flex-start;
+    }
+    
+    .tasa-info {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .fab {
+        width: 60px;
+        height: 60px;
+        font-size: 1.2rem;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .salir-botones {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .login-container,
+    .registro-container,
+    .pago-container {
+        margin: 30px 15px;
+        padding: 25px;
+    }
+    
+    .total-cantidad {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .promo-titulo {
+        font-size: 1.6rem;
+    }
+    
+    .producto-precio {
+        font-size: 1.5rem;
+    }
+    
+    table {
+        font-size: 14px;
+    }
+    
+    th, td {
+        padding: 10px;
+    }
+    
+    .total-cantidad {
+        font-size: 2.5rem;
+    }
+    
+    .multipago-card h3 {
+        font-size: 1.6rem;
+    }
+}
