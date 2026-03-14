@@ -744,7 +744,7 @@ function confirmarPedido() {
             console.log('Enviando pedido a la API:', datosPedido);
             
             // Enviar a la API
-            const response = await fetch('/gusticos/api/crear_pedido.php', {
+            const response = await fetch('/../api/crear_pedido.php', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(datosPedido)
